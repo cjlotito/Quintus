@@ -67,6 +67,21 @@ Q.Sprite.extend("Tower", {
   }
 });
 
+//## Testing Cannon
+Q.Sprite.extend('Cannon',{
+    init: function(props) {
+      this._super({
+        shape:'polygon',
+        color: 'black',
+        points: [[ 0,0 ], [0,-5], [5,-10], [8, -11], [40, -11], 
+                  [ 40, 11], [8, 11], [5, 10], [0, 5] ],
+        x: 210,
+        y: 0
+      });
+    }
+  });
+
+
 // ## Enemy Sprite
 // Create the Enemy class to add in some baddies
 Q.Sprite.extend("Enemy",{
@@ -110,15 +125,17 @@ Q.scene("level1",function(stage) {
                              sheet:     'tiles' }));
 
   //Testing
-  var sprite2 = new Q.Sprite({ x: 500, y: 0, w: 300, h: 200 });
-    sprite2.draw= function(ctx) {
-      ctx.fillStyle = '#FF0000';
-      ctx.fillRect(-this.p.cx,-this.p.cy,this.p.w,this.p.h);
-    };
-    stage.insert(sprite2);
+  //var sprite2 = new Q.Sprite({ x: 500, y: 0, w: 300, h: 200 });
+   // sprite2.draw= function(ctx) {
+    //  ctx.fillStyle = '#FF0000';
+   //   ctx.fillRect(-this.p.cx,-this.p.cy,this.p.w,this.p.h);
+  //  };
+ //   stage.insert(sprite2);
 
   // Create the player and add them to the stage
   var player = stage.insert(new Q.Player());
+  
+  stage.cannon = stage.insert(new Q.Cannon());
 
   // Give the stage a moveable viewport and tell it
   // to follow the player.
