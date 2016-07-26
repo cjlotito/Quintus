@@ -110,7 +110,12 @@ Q.scene("level1",function(stage) {
                              sheet:     'tiles' }));
 
   //Testing
-  stage.insert(new Q.Sprite({ w: 10, h:50, x: 500, y: 200 }));
+  var sprite2 = new Q.Sprite({ x: 500, y: 600, w: 300, h: 200 });
+    sprite2.draw= function(ctx) {
+      ctx.fillStyle = '#FF0000';
+      ctx.fillRect(-this.p.cx,-this.p.cy,this.p.w,this.p.h);
+    };
+    stage.insert(sprite2);
 
   // Create the player and add them to the stage
   var player = stage.insert(new Q.Player());
