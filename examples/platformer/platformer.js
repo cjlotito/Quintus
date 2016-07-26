@@ -63,7 +63,7 @@ Q.Sprite.extend("Player",{
 // Sprites can be simple, the Tower sprite just sets a custom sprite sheet
 Q.Sprite.extend("Tower", {
   init: function(p) {
-    this._super(p, { sheet: 'tower' });
+
     var sprite2 = new Q.Sprite({ x: 100, y: 0, w: 30, h: 20 });
     sprite2.draw= function(ctx) {
       ctx.fillStyle = '#FF0000';
