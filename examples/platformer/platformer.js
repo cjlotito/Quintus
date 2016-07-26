@@ -64,6 +64,12 @@ Q.Sprite.extend("Player",{
 Q.Sprite.extend("Tower", {
   init: function(p) {
     this._super(p, { sheet: 'tower' });
+    var sprite2 = new Q.Sprite({ x: 100, y: 0, w: 30, h: 20 });
+    sprite2.draw= function(ctx) {
+      ctx.fillStyle = '#FF0000';
+      ctx.fillRect(-this.p.cx,-this.p.cy,this.p.w,this.p.h);
+    };
+    stage.insert(sprite2);
   }
 });
 
