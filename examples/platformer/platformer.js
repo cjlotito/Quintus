@@ -69,7 +69,6 @@ Q.Sprite.extend("Tower", {
       ctx.fillStyle = '#FF0000';
       ctx.fillRect(-this.p.cx,-this.p.cy,this.p.w,this.p.h);
     };
-    stage.insert(sprite2);
   }
 });
 
