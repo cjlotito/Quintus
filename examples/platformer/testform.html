@@ -1,14 +1,14 @@
-<!DOCTYPE html><html class=''>
+<!DOCTYPE html>
 <head><script src='//assets.codepen.io/assets/editor/live/console_runner-d0a557e5cb67f9cd9bbb9673355c7e8e.js'></script><script src='//assets.codepen.io/assets/editor/live/events_runner-21174b4c7273cfddc124acb0876792e0.js'></script><script src='//assets.codepen.io/assets/editor/live/css_live_reload_init-7618a0de08795409d8f6c9ef6805f7b2.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="canonical" href="https://codepen.io/anon/pen/JKkEqG" />
 <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
 
-
-<link rel='stylesheet prefetch' href='//codepen.io/assets/reset/normalize.css'><link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 <style class="cp-pen-styles">body {
   padding: 1em;
   background: #EEE;
 }
-</style></head><body>
+</style>
+</head>
+<body>
 <form role="form">
   <h3>Saving a file with pure JS!</h3>
   <p>Uses HTML5 W3C saveAs() function and the <a href="https://github.com/eligrey/FileSaver.js" target="_blank">FileSaver.js</a> polyfill for this.<br>
@@ -30,6 +30,5 @@
     var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
     saveAs(blob, filename + '.txt');
 });
-//# sourceURL=pen.js
 </script>
 </body></html>
