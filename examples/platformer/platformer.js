@@ -28,12 +28,14 @@ Q.Sprite.extend("Player",{
   init: function(p) {
 
     // You can call the parent's constructor with this._super(..)
-    this._super(p, {
-      sheet: "player",  // Setting a sprite sheet sets sprite width and height
-      x: 410,           // You can also set additional properties that can
-      y: 90             // be overridden on object creation
-    });
-
+    //this._super(p, {
+    //  sheet: "player",  // Setting a sprite sheet sets sprite width and height
+    //  x: 410,           // You can also set additional properties that can
+    //  y: 90             // be overridden on object creation
+    //});
+    
+    this._super(p, { w: 30, h:30, x: 410, y: 90, color: 'blue' });
+    
     // Add in pre-made components to get up and running quickly
     // The `2d` component adds in default 2d collision detection
     // and kinetics (velocity, gravity)
