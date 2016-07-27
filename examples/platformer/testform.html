@@ -33,24 +33,4 @@
 });
 //# sourceURL=pen.js
 </script>
-<button onclick="readTextFile()">Click me</button>
-<script>
-function readTextFile("file:///C:/Users/anchor1.TFAYD/Downloads/file.txt")
-  {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }
-        }
-    }
-    rawFile.send(null);
-}
-</script>
 </body></html>
