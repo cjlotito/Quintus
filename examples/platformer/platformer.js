@@ -107,9 +107,10 @@ Q.scene("level1",function(stage) {
   stage.insert(new Q.Repeater({ asset: "background-wall.png", speedX: 0.5, speedY: 0.5 }));
 
   // Add in a tile layer, and make it the collision layer
-  stage.collisionLayer(new Q.TileLayer({
-                             dataAsset: 'level.json',
-                             sheet:     'tiles' }));
+  //stage.collisionLayer(new Q.TileLayer({dataAsset: 'level.json',sheet: 'tiles'}));
+   
+   //Blue Background                          
+   stage.collisionLayer(new Q.TileLayer({dataAsset: 'level.json', w: 30, h:30, x: 410, y: 90, color: 'blue' });
 
   //Testing
   //var sprite2 = new Q.Sprite({ x: 500, y: 0, w: 300, h: 200 });
